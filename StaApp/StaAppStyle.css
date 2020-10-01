@@ -1,0 +1,102 @@
+/*
+.bluebut{
+    border-radius: 15px;
+    border: 2px solid gray;
+    background: rgb(189, 189, 230);
+    padding: 20px;
+    width: 40px;
+    height: 25px;
+    font-size: 20pt;
+}
+
+#tablLayout{
+
+    background-image: linear-gradient(rgb(255, 255, 255), rgb(146, 146, 144), rgb(255, 255, 255));
+    border-radius: 25px;
+    border: 4px solid grey;
+}
+*/
+
+
+
+
+
+:root{
+    --background-EWU-color: #861212;
+    --background-color: #0090becc;
+    --background-XMAS-color: #ff0000af;
+    --background-TURKEY-color: #a5472a;
+
+    --border-EWU-color: #ffffff;
+    --border-color: #808080;
+    --border-XMAS-color: #8ec038cc;
+    --border-TURKEY-color: #ffff00;
+
+    --image-EWU: Ewu.jpg;
+    --image-STA: Sta.jpg;
+    --image-XMAS: Xmas.jpg;
+    --image-Turkey: Turkey.png;
+    --font-color: black;
+
+
+}
+
+#sexybody{
+    border: 8px solid gray;
+    border-color : var(--border-color);
+    
+}
+#image{
+    content:url(Sta.jpg);
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    
+    
+}
+
+#stopId{
+    background : var(--background-color);
+    /*border-block: 4px;
+    border: 4px solid gray;
+    */
+    height: 827px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 32pt;
+}
+.column {
+    float: left;
+    width: 49.39%;
+    background : var(--background-color);
+    border-block: 4px;
+    border: 4px solid #808080;
+    border-color : var(--border-color);
+    height: 600px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 18pt;
+    color: var(--font-color);
+  }
+
+  .changeText{
+      color: var(--font-color);
+  }
+  
+
+  
+#nameHolder{
+    font-size: 30pt;
+    
+}  
+
+#clock{
+    text-align: right;
+    font-size: 25pt;
+    
+    
+}
+
+#mainBody{
+    height: 1000px;
+}
+
+

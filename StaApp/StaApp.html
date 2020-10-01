@@ -1,0 +1,114 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <head>
+        
+        <link rel="stylesheet" href="StaAppStyle.css">
+        <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+        <script src= "./StaAppFunction.js" async defer></script>
+    
+        <title>Transit Arrival and Departure</title>
+    </head>
+   <body id= "sexybody">
+       <div id = startup>
+        <div id = "hideSelect">
+            <form>
+                    Select your number of Stops:
+                    <select id="selectNumStop">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                    </select>
+                  </form>
+                  
+                  
+                  <button type="button" onclick="setNumberStops()">Select</button>
+                </div>
+                  <div id= "stopForm1" style="display:none;">
+                    Enter Stop(s) id (Ex: STA_PZ6)<br>
+                    <div class = hideTextBox>
+                    <input type= "textbox" value = "" id = "1txt1"><br>
+                    </div>
+                    <button type="button" onclick="setStops()">Submit</button>
+                </div>
+                  <div id= "stopForm2" style="display:none;">
+                        Enter Stop(s) id (Ex: STA_PZ6)<br>
+                        <div class = hideTextBox>
+                        <input type= "textbox" value = "" id = "1txt2"><br>
+                        <input type= "textbox" value = "" id = "2txt2"><br>
+                    </div>
+                        <button type="button" onclick="setStops()">Submit</button>
+                </div>
+                  <div id= "stopForm3" style="display:none;">
+                        Enter Stop(s) id (Ex: STA_PZ6)<br>
+                        <div class = hideTextBox>
+                        <input type= "textbox" value = "" id = "1txt3"><br>
+                        <input type= "textbox" value = ""  id = "2txt3"><br>
+                        <input type= "textbox" value = ""  id = "3txt3"><br>
+                        </div>
+                        <button type="button" onclick="setStops()">Submit</button>
+                </div>
+                  <div id= "stopForm4" style="display:none;">
+                        Enter Stop(s) id (Ex: STA_PZ6)<br>
+                        <div class = hideTextBox>
+                        <input type= "textbox" value = ""  id = "1txt4"><br>
+                        <input type= "textbox" value = ""  id = "2txt4"><br>
+                        <input type= "textbox" value = ""  id = "3txt4"><br>
+                        <input type= "textbox" value = ""  id = "4txt4"><br>
+                        </div>
+                        <button type="button" onclick="setStops()">Submit</button>
+                </div>
+                
+       </div>
+       <div id = "hideBadging">
+        <form>
+                Select your Badging:
+                <select id="selectBadging">
+                  <option value="STA">STA</option>
+                  <option value="EWU">EWU</option>
+                  <option value="XMAS">XMAS</option>
+                  <option value="TURKEY">THANKSGIVING</option>
+                </select>
+              </form>
+              <button type="button" onclick="setBadging()">Submit</button>
+              </div>
+
+       <div id = mainBody style="display:none;">
+            <div id= stopId> 
+                
+                <div id= stopName class = "changeText"> 
+                    <div id=image></div>
+                    <p id="clock"></p>
+
+                    <script>
+                    var myVar = setInterval(myTimer, 1000);
+                    
+                    function myTimer() {
+                      var d = new Date();
+                      document.getElementById("clock").innerHTML = d.toLocaleTimeString();
+                    }
+                    </script>
+                  <p id=nameHolder class = "changeText"></p>
+                  </div>
+             <div class="row">
+                <div class="column">
+                  <h2 class = "changeText">Upcoming Arrivals</h2>
+                  <div id = "arrival">
+
+                  </div>
+                </div>
+                <div class="column">
+                  <h2 class = "changeText">Upcoming Departures</h2>
+                  <div id= "departure">
+
+                  </div>
+                </div>
+             </div>
+            </div>
+       </div>
+           
+    </body>
+</html>
